@@ -1,0 +1,158 @@
+{
+  "ModelExecutor": {
+    "model_name": "CocoObjectDetection_De",
+    "model_loader_file": "default"
+  },
+  "ModelLoader": {
+    "file_location":".",
+    "is_class":"Yes",
+    "class_name": "CocoObjectDetection_De",
+    "first_method_to_call_in_class":"predict_request"
+  },
+  "FastAPI" :
+  {
+    "host" : "0.0.0.0",
+    "port" : 8448,
+    "endpoint": "/CocoObjectDetection_De"
+  },
+  "CocoObjectDetection_De":
+  {
+    "name" : "fasterrcnn_resnet50_fpn",
+    "model_path": [],
+    "classes": []
+  },
+  "PyTorch":
+  {
+    "name" : "mobilenetv2_model",
+    "category" : "image_classification",
+    "model_path" : ["C:/IMIL/Demo/weight_files/resnet50.pth"],
+    "class_names": ["imagenet"],
+    "classes" : ["limousine, limo", "forklift"],
+    "input_image_size": [224,224],
+    "device" : "cpu"
+  },
+  "Tensorflow":
+  {
+    "name" : "mobilenetv2_model",
+    "model_path" : ["C:/IMIL/Demo/weight_files/mobilenetv2_model.h5"],
+    "class_names": ["imagenet"],
+    "classes" : [],
+    "input_image_size": [224,224],
+    "device" : "cpu"
+  },
+  "CocoObjectDetection_Y5":
+  {
+    "model_path": ["path to th weight file"],
+    "device" : "cpu",
+    "conf_thres" : 0.25,
+    "iou_thres" : 0.7,
+    "classes": [0, 1, 39]
+  },
+  "CocoObjectDetection_Y8":
+  {
+    "model_path": ["path to th weight file"],
+    "device" : "cpu",
+    "conf_thres" : 0.25,
+    "iou_thres" : 0.7,
+    "classes": []
+  },
+  "CocoObjectDetection_Y7":
+  {
+    "yolo_path" : "place/the/yolo7/directory/here",
+    "model_path": ["path/to/Yolov7/model/weight/yolov7.pt"],
+    "device" : "cpu",
+    "img_size" : 640,
+    "conf_thres" : 0.25,
+    "iou_thres" : 0.7,
+    "classes": []
+  },
+  "FacialExpressionRecognition":
+  {
+    "model_path": []
+  },
+  "CustomDetectoModelLoader":
+  {
+    "name" : "fasterrcnn_resnet50_fpn",
+    "model_path": [""],
+    "classes": ""
+  },
+  "CustomClipModelLoader":
+  {
+    "clip_model": "ViT-B/32",
+    "model_path": [""],
+    "device" : "cpu"
+  },
+  "UniquePersonDeepSort": {
+    "name": "unique_person_deepsort",
+    "model_path": ["C:/Users/shradhamahadev.naik/Downloads/modelunique/yolov7.pt"],
+    "conf_thres": 0.25,
+    "iou_thres": 0.7,
+    "img_size": 640,
+    "encoder_path": "C:/Users/shradhamahadev.naik/Downloads/modelunique/mars-small128.pb",
+    "class_names_path" : "C:/UniquePersonDeepSort/UniquePersonDeepSort/UniquePersonDeepSortInference/src/uniquepersondeepsortinference/uniquepersondeepsort/model_data/coco_classes.txt",
+    "username": "",
+    "password": "",
+    "url": ""
+  },
+  "TrackAnything":{
+    "name": "track_anything",
+    "TrackAnything" : {
+      "sam_checkpoint": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\sam_vit_b_01ec64.pth",
+      "xmem_checkpoint": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\XMem-s012.pth",
+      "xmem_config_file": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\config.yaml"
+    },
+    "Detecto":{
+      "model_path": ["C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\fasterrcnn_resnet50_fpn_coco-258fb6c6.pth"],
+      "model_name" : "fasterrcnn_resnet50_fpn",
+      "classes" : ["car", "person"],
+      "detecto_model" : "None"
+    }
+  },
+  "CustomTrackAnythingModelLoader": {
+      "name": "track_anything",
+    "TrackAnything" : {
+      "sam_checkpoint": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\sam_vit_b_01ec64.pth",
+      "xmem_checkpoint": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\XMem-s012.pth",
+      "xmem_config_file": "C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\config.yaml"
+    },
+    "Detecto":{
+      "model_path": ["C:\\Users\\shradhamahadev.naik\\Downloads\\modeltrack\\fasterrcnn_resnet50_fpn_coco-258fb6c6.pth"],
+      "model_name" : "fasterrcnn_resnet50_fpn",
+      "classes" : ["car", "person"],
+      "detecto_model" : "None"
+    }
+  },
+  "CustomTrackAnythingModelLoaderold": {
+    "name": "track_anything",
+    "config_ini": "C:/TrackAnything2/config/config.ini",
+    "sam_checkpoint": "C:\\Users\\shradhamahadev.naik\\Desktop\\Homography\\SAM1\\model\\sam_vit_b_01ec64.pth",
+    "classes": ["person", "bicycle", "car"]
+  },
+  "FireSmokeClassifier_R50": {
+    "name": "fire_smoke_classifier_r50",
+     "model_path": ["c://Users//shradhamahadev.naik//Downloads//fasterrcnn_resnet50_fpn_coco-258fb6c6//fasterrcnn_resnet50_fpn_coco-258fb6c6.pth"],
+    "classes" : ["fire", "smoke", "neutral"],
+    "device": "cpu"
+    
+  },
+  "CustomFireSmokeClassifier_R50ModelLoader": {
+    "name": "fire_smoke_classifier_r50",
+     "model_path": ["c://Users//shradhamahadev.naik//Downloads//fasterrcnn_resnet50_fpn_coco-258fb6c6//fasterrcnn_resnet50_fpn_coco-258fb6c6.pth"],
+    "classes" : ["fire", "smoke", "neutral"],
+    "device": "cpu"
+    
+  },
+
+  "CustomUniquePersonDeepSortModelLoader": {
+    "name": "unique_person_deepsort",
+    "model_path": ["C:/Users/shradhamahadev.naik/Desktop/imil/UniquePersonDeepSort/UniquePersonDeepSort/UniquePersonDeepSortInference/uniquepersondeepsortinference/uniquepersondeepsort/yolov5_weights/yolov7.pt"],
+    "conf_thres": 0.25,
+    "iou_thres": 0.7,
+    "img_size": 640,
+    "encoder_path": "C:/Users/shradhamahadev.naik/Desktop/imil/UniquePersonDeepSort/UniquePersonDeepSort/UniquePersonDeepSortInference/uniquepersondeepsortinference/uniquepersondeepsort/model_data/mars-small128.pb",
+    "class_names_path": "C:/Users/shradhamahadev.naik/Desktop/imil/UniquePersonDeepSort/UniquePersonDeepSort/UniquePersonDeepSortInference/uniquepersondeepsortinference/uniquepersondeepsort/model_data/coco_classes.txt",
+    "username": "",
+    "password": "",
+    "url": ""
+  }
+}
